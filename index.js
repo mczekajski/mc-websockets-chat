@@ -1,9 +1,9 @@
-import { WebSocketServer } from "ws";
-import express from "express";
+const WebSocket = require("ws");
+const express = require("express");
 
 const app = express();
-const PORT = process.env.PORT || 8080;
-const wss = new WebSocketServer({ port: PORT });
+const PORT = 8080;
+const wss = new WebSocket.Server({ port: PORT });
 
 app.get("/", (req, res) => {
   res.send(`WebSocketServer is working on port ${PORT}`);

@@ -20,7 +20,7 @@
           </div>
         `;
       }
-      const ws = new WebSocket("ws://localhost:8080");
+      const ws = new WebSocket("ws://mc-websocket-chat.herokuapp.com:8080");
       ws.addEventListener("message", (ev) => {
         ev.data.text().then(showMessage);
       });
