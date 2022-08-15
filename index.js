@@ -2,7 +2,7 @@ const WebSocket = require("ws");
 const express = require("express");
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 const wss = new WebSocket.Server({ port });
 
 app.get("/", (req, res) => {
