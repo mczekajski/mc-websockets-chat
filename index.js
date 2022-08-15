@@ -3,7 +3,7 @@ import express from "express";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const wss = new WebSocketServer({ PORT });
+const wss = new WebSocketServer({ port: PORT });
 
 app.get("/", (req, res) => {
   res.send(`WebSocketServer is working on port ${PORT}`);
