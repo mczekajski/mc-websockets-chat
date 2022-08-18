@@ -3,6 +3,8 @@ const WebSocket = require("ws");
 const port = process.env.PORT || 80;
 const wss = new WebSocket.Server({ port });
 
+console.log(port);
+
 wss.on("connection", (client) => {
   client.on("message", (message, isBinary) => {
     [...wss.clients]

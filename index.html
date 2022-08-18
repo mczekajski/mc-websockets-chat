@@ -21,10 +21,10 @@
         `;
       }
       const ws = new WebSocket("wss://mc-websocket-chat.herokuapp.com:80");
-      ws.onopen = () => {
+      ws.addEventListener("open", () => {
         console.log("Connection is opened");
         ws.send("Hello");
-      };
+      });
       ws.addEventListener("message", (ev) => {
         ev.data.text().then(showMessage);
       });
