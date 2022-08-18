@@ -20,7 +20,7 @@
           </div>
         `;
       }
-      const ws = new WebSocket("wss://mc-websocket-chat.herokuapp.com:80");
+      const ws = new WebSocket("wss://mc-websocket-chat.herokuapp.com");
       ws.addEventListener("open", () => {
         console.log("Connection is opened");
         ws.send("Hello");
